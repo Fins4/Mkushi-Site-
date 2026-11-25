@@ -134,7 +134,7 @@ async function show(no){
   loading.style.display = 'grid';
   if (!cache[no]) {
     try {
-      const res = await fetch(`sheets/${no}.svg`);
+      const res = await fetch(`${no}.svg`);
       cache[no] = await res.text();
     } catch (e) { loading.textContent = 'Could not load sheet.'; return; }
   }
